@@ -1,0 +1,51 @@
+Screen {
+  layers: base overlay;
+}
+#workspace {
+  layout: grid;
+  grid-size: 2 2;
+  grid-rows: 55fr 45fr;
+  grid-columns: 60fr 40fr;
+  width: 100%;
+  height: 100%;
+  layer: base;
+}
+
+BrowserPane {
+  column-span: 2;
+  width: 100%;
+  height: 100%;
+}
+
+Logs {
+  width: 100%;
+  height: 100%;
+  padding: 2;
+}
+
+StagingArea {
+  width: 100%;
+  height: 100%;
+  padding: 2;
+}
+
+.pane-header {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  padding: 0 1;
+  margin-bottom: 1;
+}
+OptionList {
+  border: none;
+}
+RichLog {
+  background: rgba(0, 0, 0, 0.2);
+  border: solid rgba(255, 255, 255, 0.1);
+  height: 1fr;
+}
+#staging-list-box {
+  background: rgba(0, 0, 0, 0.2);
+  border: solid rgba(255, 255, 255, 0.1);
+  height: 1fr;
+}
+
