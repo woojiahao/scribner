@@ -1,0 +1,35 @@
+OutputDialog {
+  align: center middle;
+  background: transparent;
+  layer: overlay;
+}
+
+#dialog-box {
+  width: 60;
+  height: auto;
+  background: rgb(130, 130, 130) 20%;
+  border: heavy blue;
+  padding: 1;
+}
+
+#dialog-title {
+  text-style: bold;
+  margin-bottom: 1;
+}
+
+Input {
+  margin-bottom: 1;
+}
+
+#button-row {
+  
+  height: auto;
+  align: right middle;
+}
+
+# OutputDialog Button {
+#   margin-left: 1;
+#   min-width: 8;
+#   padding: 0 1;
+#   height: 1;
+# }
