@@ -1,0 +1,23 @@
+ProgressDialog {
+  align: center middle;
+  background: transparent;
+  layer: overlay;
+}
+
+#progress-box {
+  width: 70;
+  height: auto;
+  background: rgb(130, 130, 130) 20%;
+  border: heavy #2ecc71;
+  padding: 1;
+}
+
+#progress-label {
+  margin-bottom: 1;
+  text-style: bold;
+}
+
+ProgressBar {
+  width: 100%;
+}
+
