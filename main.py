@@ -1,6 +1,5 @@
-def main():
-    print("Hello from scribner!")
-
+from app import Scribner
 
 if __name__ == "__main__":
-    main()
+    app = Scribner()
+    app.run()
