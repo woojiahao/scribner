@@ -1,0 +1,23 @@
+HelpDialog {
+  align: center middle;
+  background: transparent;
+  layer: overlay;
+}
+
+#help-dialog {
+  padding: 2 4;
+  width: 55;
+  height: auto;
+  background: rgb(130, 130, 130) 20%;
+  border: heavy blue;
+}
+
+#help-title {
+  width: 100%;
+  text-align: center;
+  text-style: bold;
+}
+
+#help-text {
+  width: 39;
+}
