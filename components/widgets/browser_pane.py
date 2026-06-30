@@ -1,18 +1,15 @@
 import os
 from pathlib import Path
-from typing import List, Literal, Optional, Set
+from typing import List, Optional, Set
 
 from components.file_option import FileOption
 from textual import on
 from textual.app import ComposeResult
 from textual.containers import Horizontal, Vertical
-from textual.message import Message
 from textual.reactive import reactive
 from textual.widget import Widget
 from textual.widgets import OptionList
 from textual.widgets.option_list import Option
-
-from components.widgets.logs import Logs
 
 
 class BrowserPane(Widget):
@@ -59,7 +56,6 @@ class BrowserPane(Widget):
 
     @on(OptionList.OptionHighlighted)
     def handle_option_highlight(self, event: OptionList.OptionHighlighted) -> None:
-        self.app.query_one(Logs).write(f"event id is {event.option_list.id}")
         if event.option_list.id == "current-col":
             self.__update_preview_col()
 
@@ -111,17 +107,9 @@ class BrowserPane(Widget):
 
         old_highlight = current_col.highlighted
 
-        self.app.query_one(Logs).write(
-            f"preview col has {preview_col.option_count} options"
-        )
-
         parent_col.clear_options()
         current_col.clear_options()
         preview_col.clear_options()
-
-        self.app.query_one(Logs).write(
-            f"preview col has {preview_col.option_count} options"
-        )
 
         self.__update_parent_col()
         self.__update_current_col(select_first)
@@ -231,7 +219,4 @@ class BrowserPane(Widget):
         return self.query_one(id, OptionList)
 
     def __is_path_selected(self, path: Path) -> bool:
-        self.app.query_one(Logs).write(
-            f"path {path.name} is {path in self.selected_folders}"
-        )
         return path in self.selected_folders

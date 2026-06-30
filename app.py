@@ -64,11 +64,9 @@ class Scribner(App):
         self.app.push_screen(HelpDialog())
 
     def action_nav_up(self) -> None:
-        self.query_one(Logs).write("pressing up")
         self.query_one(BrowserPane).nav_up()
 
     def action_nav_down(self) -> None:
-        self.query_one(Logs).write("pressing down")
         self.query_one(BrowserPane).nav_down()
 
     def action_nav_left(self) -> None:

@@ -23,6 +23,7 @@ class StagingArea(Widget):
 
     def watch_selected_folders(self, value: Set[Path]) -> None:
         staging_area = self.query_one("#staging-list", OptionList)
+        staging_area.clear_options()
 
         if not value:
             staging_area.add_option(Option("[No Folders Staged]"))
